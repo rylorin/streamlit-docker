@@ -2,7 +2,15 @@ version: "3.8"
 services:
   streamlit:
     image: rylorin/streamlit:latest
-    ports:
-    - 8501:8501/tcp
+#    ports:
+#    - 8501:8501/tcp
     environment:
       GIT_URL: ${GIT_URL}
+    networks:
+      - default
+      - system_dmz_network
+
+networks:
+  default:
+  system_dmz_network:
+    external: true
