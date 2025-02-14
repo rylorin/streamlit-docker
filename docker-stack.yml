@@ -5,7 +5,7 @@ services:
 #    ports:
 #    - 8501:8501/tcp
     environment:
-      GIT_URL: ${GIT_URL}
+      GIT_URL: ${GIT_URL:-https://github.com/streamlit/streamlit-example.git}
     networks:
       - default
       - system_dmz_network
