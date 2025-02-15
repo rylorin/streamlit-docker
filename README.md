@@ -14,6 +14,12 @@ Before getting started, make sure you have the following installed on your machi
 
 ## 🚀 Installation & Usage
 
+0. **Download the image**
+
+   ```sh
+   docker pull rylorin/streamlit-docker
+   ```
+
 1. **Run the container**
 
    ```sh
@@ -26,7 +32,15 @@ Before getting started, make sure you have the following installed on your machi
 
 ## ⚙️ Customization
 
-If you want to run a different Streamlit application, modify the `app.py` file or mount your own script as a volume:
+The `GIT_URL` variable specifies the Git repository URL containing the Streamlit application to be executed. By default, it is set to `https://github.com/streamlit/streamlit-example.git`.
+
+You can change it by specifying another URL:
+
+```sh
+docker run --env GIT_URL=${https://github.com/your-user/your-repository.git} -p 8501:8501 streamlit-docker
+```
+
+Or you can run a local application and mount your own script or volume:
 
 ```sh
 docker run -p 8501:8501 -v $(pwd)/my_app:/app/streamlit_app/ streamlit-docker
@@ -47,22 +61,7 @@ docker run -p 8501:8501 -v $(pwd)/my_app:/app/streamlit_app/ streamlit-docker
 
 ### 🌍 Environment Variable `GIT_URL`
 
-The `GIT_URL` variable specifies the Git repository URL containing the Streamlit application to be executed. By default, it is set to `https://github.com/streamlit/streamlit-example.git`.
-
-You can change it during deployment by specifying another URL:
-
-```sh
-export GIT_URL=https://github.com/your-user/your-repository.git
-docker run --env GIT_URL=${GIT_URL} -p 8501:8501 streamlit-docker
-```
-
-Or if your application is on the local machine ($(pwd)/my_app)
-
-```sh
-docker run -p 8501:8501 -v $(pwd)/my_app:/app/streamlit_app/ streamlit-docker
-```
-
-Or directly in `docker-compose.yml`:
+The `GIT_URL` variable specifies the Git repository URL containing the Streamlit application to be executed and can be set directly in `docker-compose.yml`:
 
 ```yaml
 environment:
