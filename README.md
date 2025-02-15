@@ -1,8 +1,7 @@
 # streamlit-docker
-  <div style="display: flex;justify-content:center;">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg"/> 
-    <img src="https://img.shields.io/docker/pulls/rylorin/streamlit-docker.svg"></img>
-  </div>
+
+![License MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/rylorin/streamlit-docker.svg)
 
 This repository contains a Docker container to run Streamlit applications from a GitHub repository.
 
@@ -14,19 +13,19 @@ Before getting started, make sure you have the following installed on your machi
 
 ## 🚀 Installation & Usage
 
-0. **Download the image**
+1. **Download the image**
 
    ```sh
    docker pull rylorin/streamlit-docker
    ```
 
-1. **Run the container**
+2. **Run the container**
 
    ```sh
    docker run -p 8501:8501 rylorin/streamlit-docker
    ```
 
-2. **Access the application**
+3. **Access the application**
 
    - Open a browser and go to [http://localhost:8501](http://localhost:8501)
 
@@ -38,10 +37,10 @@ You can change it by specifying another URL:
 
 ```sh
 export GIT_URL="https://github.com/your-user/your-repository.git"
-docker run --env GIT_URL="${GIT_URL}" -p 8501:8501 streamlit-docker
+docker run -p 8501:8501 --env GIT_URL="${GIT_URL}" rylorin/streamlit-docker
 ```
 
-Or you can run a local application and mount your own script or volume:
+Or you can and mount your own script or volume to run a local application:
 
 ```sh
 docker run -p 8501:8501 -v $(pwd)/my_app:/app/streamlit_app/ streamlit-docker
