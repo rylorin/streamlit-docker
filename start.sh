@@ -10,7 +10,8 @@ fi
 cd streamlit_app || { echo "Directory 'streamlit_app' not found!"; exit 1; }
 
 echo "Installing dependencies..."
-pip3 --root-user-action install -r requirements.txt >/dev/null
+pip3 install -r requirements.txt >/dev/null
+# --root-user-action
 
 echo "Starting..."
 exec streamlit run streamlit_app.py
