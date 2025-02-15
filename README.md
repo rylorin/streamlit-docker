@@ -1,5 +1,6 @@
 # streamlit-docker
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/rylorin/streamlit-docker/deploy-dockerhub.yml)
 ![License MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/rylorin/streamlit-docker.svg)
 
