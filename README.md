@@ -44,7 +44,7 @@ docker run -p 8501:8501 --env GIT_URL="${GIT_URL}" rylorin/streamlit-docker
 Or you can and mount your own script or volume to run a local application:
 
 ```sh
-docker run -p 8501:8501 -v $(pwd)/my_app:/app/streamlit_app/ streamlit-docker
+docker run -p 8501:8501 -v $(pwd)/my_app:/app/streamlit_app/ rylorin/streamlit-docker
 ```
 
 ## 🛠 Development & Debugging
@@ -75,7 +75,7 @@ Example `docker-compose.yml` configuration to deploy the application with Docker
 version: "3.8"
 services:
   streamlit:
-    image: rylorin/streamlit:latest
+    image: rylorin/streamlit-docker:latest
 #    ports:
 #    - 8501:8501/tcp
     environment:
@@ -96,4 +96,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## ✨ Contributions
 
-Contributions are welcome! Please submit a *pull request* with your improvements.
+Contributions are welcome! Please submit a *pull request* to rylorin/streamlit-docker with your improvements.
