@@ -76,8 +76,8 @@ version: "3.8"
 services:
   streamlit:
     image: rylorin/streamlit-docker:latest
-#    ports:
-#    - 8501:8501/tcp
+    ports:
+    - 8501:8501/tcp
     environment:
       GIT_URL: ${GIT_URL:-https://github.com/streamlit/streamlit-example.git}
     networks:
