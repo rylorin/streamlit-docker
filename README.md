@@ -4,7 +4,7 @@
 ![License MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Docker Pulls](https://img.shields.io/docker/pulls/rylorin/streamlit-docker.svg)
 
-This repository contains a Docker container to run Streamlit applications from a GitHub repository.
+This repository contains a Docker container to run Streamlit applications from a GitHub repository or a local volume.
 
 ## 📌 Prerequisites
 
