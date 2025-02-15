@@ -37,7 +37,8 @@ The `GIT_URL` variable specifies the Git repository URL containing the Streamlit
 You can change it by specifying another URL:
 
 ```sh
-docker run --env GIT_URL=${https://github.com/your-user/your-repository.git} -p 8501:8501 streamlit-docker
+export GIT_URL="https://github.com/your-user/your-repository.git"
+docker run --env GIT_URL="${GIT_URL}" -p 8501:8501 streamlit-docker
 ```
 
 Or you can run a local application and mount your own script or volume:
