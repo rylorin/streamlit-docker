@@ -8,9 +8,9 @@ RUN apt-get update && apt-get install -y \
     software-properties-common \
     git \
     && rm -rf /var/lib/apt/lists/*
-RUN pip3 install --upgrade pip
+RUN pip3 install --root-user-action=ignore --upgrade pip
 
-RUN pip3 install streamlit
+RUN pip3 install --root-user-action=ignore streamlit
 
 COPY start.sh .
 RUN chmod a+x start.sh
