@@ -96,4 +96,6 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## ✨ Contributions
 
-Contributions are welcome! Please submit a *pull request* to rylorin/streamlit-docker with your improvements.
+Contributions are welcome! Please submit a *pull request* to
+[rylorin/streamlit-docker](https://github.com/rylorin/streamlit-docker)
+GitHub repository with your improvements.
